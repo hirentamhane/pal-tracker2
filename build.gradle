@@ -5,7 +5,6 @@ plugins {
 }
 
 group = 'com.paltracker'
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
@@ -20,3 +19,11 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+bootRun.environment([
+		"WELCOME_MESSAGE": "howdy",
+])
+
+test.environment([
+		"WELCOME_MESSAGE": "Hello from test",
+])
